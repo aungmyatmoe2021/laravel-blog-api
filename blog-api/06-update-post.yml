@@ -1,0 +1,26 @@
+info:
+  name: 06-update-post
+  type: http
+  seq: 13
+
+http:
+  method: PUT
+  url: http://127.0.0.1:8000/api/posts/101
+  body:
+    type: json
+    data: |-
+      {
+        "user_id":1,
+        "category_id":12,
+        "title":"testing title",
+        "body":"testing testing title",
+        "post_image":"link for image"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
