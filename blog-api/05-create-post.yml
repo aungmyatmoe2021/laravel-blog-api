@@ -1,0 +1,26 @@
+info:
+  name: 05-create-post
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: http://127.0.0.1:8000/api/posts
+  body:
+    type: json
+    data: |-
+      {
+        "user_id":1,
+        "category_id":12,
+        "title":"test",
+        "body":"testing testing",
+        "post_image":"link for image"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
